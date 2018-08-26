@@ -7,9 +7,16 @@ class Application
     num_2 = Kernal.rand(1..20)
     num_3 = Kernal.rand(1..20)
 
-    rsep.write "#{num_1}\n"
-    rsep.write "#{num_2}\n"
-    rsep.write "#{num_3}\n"
+    resp.write "#{num_1}\n"
+    resp.write "#{num_2}\n"
+    resp.write "#{num_3}\n"
+
+    if num_1 == num_2 && num_2 == num_3
+      resp.write "You Win"
+    else
+      resp.write "You loose"
+    end
+    resp.finish
   end
 
 
